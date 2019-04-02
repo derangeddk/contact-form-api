@@ -1,0 +1,19 @@
+{
+  "name": "contact-form-api",
+  "version": "0.1.0",
+  "description": "Lets you easily build a contact form. This API sends emails on requests.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start"
+  },
+  "author": "Niels Abildgaard <niels@deranged.dk>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "bunyan": "^1.8.12",
+    "config": "^3.0.1",
+    "express": "^4.16.4",
+    "mailgun-mustache-mailer": "^1.0.0"
+  }
+}

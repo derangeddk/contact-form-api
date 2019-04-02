@@ -1,0 +1,9 @@
+{
+    "port": "PORT",
+    "recipientEmail": "RECIPIENT_EMAIL",
+    "mailgun": {
+        "from": "MAILGUN_FROM",
+        "domain": "MAILGUN_DOMAIN",
+        "apiKey": "MAILGUN_API_KEY"
+    }
+}

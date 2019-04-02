@@ -1,0 +1,18 @@
+{
+    "data": {
+        "subjectField": "subject",
+        "replyToField": "from",
+        "allowedFields": [
+            { "name": "subject", "label": "Subject", "type": "short_text", "required": true },
+            { "name": "from",    "label": "From",    "type": "email", "required": true },
+            { "name": "content", "label": "Content", "type": "long_text",  "required": true }
+        ]
+    },
+    "recipientEmail": "please-supply-this-in-env",
+    "port": 3020,
+    "mailgun": {
+        "from": "please-supply-this-in-env",
+        "domain": "please-supply-this-in-env",
+        "apiKey": "please-supply-this-in-env"
+    }
+}
