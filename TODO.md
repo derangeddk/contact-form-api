@@ -1,8 +1,3 @@
-minor
-=====
-
-- Reply-To field.
-
 patch
 =====
 
