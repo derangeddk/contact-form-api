@@ -9,13 +9,13 @@
         ]
     },
     "recipient": {
-        "email": "please-supply-this-in-env",
-        "name": "please-supply-this-in-env"
+        "email": null,
+        "name": null
     },
     "port": 3020,
     "mailgun": {
-        "from": "please-supply-this-in-env",
-        "domain": "please-supply-this-in-env",
-        "apiKey": "please-supply-this-in-env"
+        "from": null,
+        "domain": null,
+        "apiKey": null
     }
 }
