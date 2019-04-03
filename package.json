@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Lets you easily build a contact form. This API sends emails on requests.",
   "main": "index.js",
+  "containerRegistry": "ath88",
   "scripts": {
     "start": "node start"
   },

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const ContactForm = require("./index");
 const config = require("config");
 const bunyan = require("bunyan");
