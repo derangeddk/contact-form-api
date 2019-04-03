@@ -14,6 +14,6 @@
     "bunyan": "^1.8.12",
     "config": "^3.0.1",
     "express": "^4.16.4",
-    "mailgun-mustache-mailer": "^1.0.0"
+    "mailgun-mustache-mailer": "^1.0.2"
   }
 }
