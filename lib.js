@@ -124,14 +124,11 @@ function sendEmail(mailer, dataConfig, recipientEmail, templates, data, callback
         data[key] = data[key].replace(/</g, "&lt;").replace(/>/g, "&gt;").trim();
     });
 
-    //TODO: mailer should be able to take "other elements", where we can set `h:Reply-To` to the reply-to email
-
     // - send email
-    mailer.send({
-        subject,
-        ...templates
-    }, {
-        ...data,
-        email: recipientEmail
-    }, callback);
+    mailer.send(
+        { subject, ...templates },
+        { ...data, email: recipientEmail },
+        { 'h:Reply-To': replyTo },
+        callback
+    );
 }
