@@ -8,7 +8,10 @@
             { "name": "content", "label": "Content", "type": "long_text",  "required": true }
         ]
     },
-    "recipientEmail": "please-supply-this-in-env",
+    "recipient": {
+        "email": "please-supply-this-in-env",
+        "name": "please-supply-this-in-env"
+    },
     "port": 3020,
     "mailgun": {
         "from": "please-supply-this-in-env",

@@ -1,6 +1,9 @@
 {
     "port": "PORT",
-    "recipientEmail": "RECIPIENT_EMAIL",
+    "recipient": {
+        "email": "RECIPIENT_EMAIL",
+        "name": "RECIPIENT_NAME"
+    },
     "mailgun": {
         "from": "MAILGUN_FROM",
         "domain": "MAILGUN_DOMAIN",

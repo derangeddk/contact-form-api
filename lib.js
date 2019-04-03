@@ -1,4 +1,4 @@
-module.exports = (mailer, dataConfig, recipientEmail) => {
+module.exports = (mailer, dataConfig, recipient) => {
     let templates = {
         text: createTextTemplate(dataConfig),
         html: createHtmlTemplate(dataConfig)
@@ -7,14 +7,14 @@ module.exports = (mailer, dataConfig, recipientEmail) => {
     return {
         sendEmail: (data, callback) => {
             if(!callback) {
-                return new Promise((resolve, reject) => sendEmail(mailer, dataConfig, recipientEmail, templates, data, (error) => {
+                return new Promise((resolve, reject) => sendEmail(mailer, dataConfig, recipient, templates, data, (error) => {
                     if(error) {
                         return reject(error);
                     }
                     resolve();
                 }));
             }
-            sendEmail(mailer, dataConfig, recipientEmail, templates, data, callback);
+            sendEmail(mailer, dataConfig, recipient, templates, data, callback);
         }
     };
 };
@@ -74,7 +74,7 @@ function createHtmlTemplate(dataConfig) {
     `;
 }
 
-function sendEmail(mailer, dataConfig, recipientEmail, templates, data, callback) {
+function sendEmail(mailer, dataConfig, recipient, templates, data, callback) {
     // validate
     let validationErrors = dataConfig.allowedFields.map((allowedField) => {
         let value = data[allowedField.name];
@@ -127,7 +127,7 @@ function sendEmail(mailer, dataConfig, recipientEmail, templates, data, callback
     // - send email
     mailer.send(
         { subject, ...templates },
-        { ...data, email: recipientEmail },
+        { ...data, ...recipient },
         { 'h:Reply-To': replyTo },
         callback
     );
