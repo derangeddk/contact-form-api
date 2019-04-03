@@ -1,8 +1,3 @@
-patch
-=====
-
-- Validate global config on first launch, ensure it is valid.
-
 nil
 ===
 

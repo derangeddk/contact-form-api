@@ -1,6 +1,6 @@
 {
   "name": "contact-form-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Lets you easily build a contact form. This API sends emails on requests.",
   "main": "index.js",
   "scripts": {
