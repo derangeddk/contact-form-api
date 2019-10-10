@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-module.exports = (contactForm, data, logger) => {
+module.exports = (contactForm, logger) => {
     let app = express();
 
     app.use(bodyParser.json());
@@ -17,6 +17,10 @@ module.exports = (contactForm, data, logger) => {
             }
             res.send({});
         });
+    });
+
+    app.get("/config", (req, res) => {
+        res.send({ allowedFields: contactForm.allowedFields });
     });
 
     return app;

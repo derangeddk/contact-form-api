@@ -17,7 +17,8 @@ module.exports = (mailer, dataConfig, recipient) => {
                 }));
             }
             sendEmail(mailer, dataConfig, recipient, templates, data, callback);
-        }
+        },
+        allowedFields: dataConfig.allowedFields
     };
 };
 
