@@ -280,7 +280,11 @@ function sendEmail(mailer, dataConfig, recipient, templates, data, callback) {
 
     // - clean data
     Object.keys(data).forEach((key) => {
-        data[key] = data[key].replace(/</g, "&lt;").replace(/>/g, "&gt;").trim();
+        data[key] = data[key]
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\r?\n/g, "<br>")
+            .trim();
     });
 
     // - send email
