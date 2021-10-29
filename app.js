@@ -6,7 +6,7 @@ module.exports = (contactForm, logger) => {
     app.use(express.json());
 
     app.post("/", (req, res) => {
-        contactForm.sendEmail(req.body, (error, result) => {
+        contactForm.sendEmail(req.body, (error) => {
             if(error && error.type == "InvalidRequest") {
                 return res.status(400).send(error.validationReport);
             }
