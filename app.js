@@ -1,10 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 
 module.exports = (contactForm, logger) => {
     let app = express();
 
-    app.use(bodyParser.json());
+    app.use(express.json());
 
     app.post("/", (req, res) => {
         contactForm.sendEmail(req.body, (error, result) => {
