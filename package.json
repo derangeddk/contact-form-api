@@ -10,7 +10,7 @@
   "author": "Niels Abildgaard <niels@deranged.dk>",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.2",
     "body-parser": "^1.18.3",
     "bunyan": "^1.8.12",
     "config": "^3.0.1",
